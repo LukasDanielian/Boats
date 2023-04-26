@@ -1,7 +1,6 @@
 class Boat
 {
   PVector pos;
-  PFont font;
   float dist, bTheta, thetaChanger;
   
   public Boat()
@@ -9,8 +8,6 @@ class Boat
     dist = random(250,(pond.length/2) * scale);
     pos = new PVector(0,0,0);
     thetaChanger = random(-.01,.01);
-    font = createFont("font.vlw",10);
-    textFont(font);
   }
   
   void render()
@@ -54,6 +51,7 @@ class Boat
     }
     
     fill(#897637);
+    textSize(9);
     text("Danielian Softworks®",0,0);
     popMatrix();
     popMatrix();
