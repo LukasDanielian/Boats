@@ -1,6 +1,7 @@
 class Boat
 {
   PVector pos;
+  PFont font;
   float dist, bTheta, thetaChanger;
   
   public Boat()
@@ -8,6 +9,8 @@ class Boat
     dist = random(250,(pond.length/2) * scale);
     pos = new PVector(0,0,0);
     thetaChanger = random(-.01,.01);
+    font = createFont("font.vlw",10);
+    textFont(font);
   }
   
   void render()
@@ -22,8 +25,11 @@ class Boat
     rotateY(bTheta);
     rotateX(-cos(dist/scale/4 + theta)/4);
     stroke(0);
-    fill(#3B1F1F);
+    fill(255);
     box(200,50,100);
+    
+    
+    pushMatrix();
     translate(0,-125,0);
     fill(255);
     box(5,200,5);
@@ -32,6 +38,24 @@ class Boat
       triangle(0,-100,0,75,100,75);
     else
       triangle(0,-100,0,75,-100,75);
+    popMatrix();
+    
+    
+    pushMatrix();
+    if(bTheta < 0)
+    {
+      translate(105,-15,0);
+      rotateY(PI/2);
+    }
+    else
+    {
+      translate(-101,-15,0);
+      rotateY(-PI/2);
+    }
+    
+    fill(#897637);
+    text("Danielian Softworks®",0,0);
+    popMatrix();
     popMatrix();
   }
 }
