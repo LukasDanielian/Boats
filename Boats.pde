@@ -11,6 +11,7 @@ void setup()
   rectMode(CENTER);
   textAlign(CENTER,CENTER);
   noStroke();
+  textSize(128);
   
   pond = new float[int(width/scale) * 2][int(width/scale) * 2];
   boats = new ArrayList<Boat>();
