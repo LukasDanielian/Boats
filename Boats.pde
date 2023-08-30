@@ -24,6 +24,7 @@ void setup()
 void draw()
 {
   background(#147DB4);
+  textSize(128);
   lights();
   camera(width/2, height * .9,0,   width/2,height,-pond.length/2 * scale,  0,1,0);
   
