@@ -50,7 +50,7 @@ class Boat
       rotateY(-PI/2);
     }
     
-    fill(#897637);
+    fill(0);
     textSize(9);
     text("Danielian Softworks®",0,0);
     popMatrix();
